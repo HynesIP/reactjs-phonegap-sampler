@@ -1,0 +1,43 @@
+{
+  "name": "touchstonejs-starter",
+  "version": "0.0.2",
+  "description": "Touchstone Starter",
+  "private": true,
+  "main": "src/js/app.js",
+  "author": "Jed Watson",
+  "dependencies": {
+    "async": "^1.3.0",
+    "classnames": "^2.1.2",
+    "cordova-dialogs": "^1.0.2",
+    "httpify": "^1.0.0",
+    "react": "^0.13.3",
+    "react-container": "^0.2.2",
+    "react-sentry": "^0.4.1",
+    "react-tappable": "^0.5.2",
+    "react-timers": "^3.1.0",
+    "touchstonejs": "^0.4.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "happiness": "*",
+    "touchstonejs-tasks": "*"
+  },
+  "scripts": {
+    "build": "gulp clean && gulp build",
+    "build:production": "gulp clean && NODE_ENV=production gulp build",
+    "lint": "happiness",
+    "prepare": "gulp clean && gulp prepare",
+    "prepare:production": "gulp clean && NODE_ENV=production gulp prepare",
+    "test": "npm run lint",
+    "start": "gulp clean && gulp dev",
+    "watch": "gulp clean && gulp watch"
+  },
+  "happiness": {
+    "ignore": [
+      "platforms",
+      "plugins",
+      "src/data",
+      "www"
+    ]
+  }
+}
